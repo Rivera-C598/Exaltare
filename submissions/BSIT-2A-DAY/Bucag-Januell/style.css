@@ -1,0 +1,236 @@
+/* ------------------------------------
+   GOOGLE FONT
+------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* ------------------------------------
+   COLOR THEME
+------------------------------------ */
+:root {
+    --primary: #00eaff;     /* Cyan */
+    --accent: #ff3ebe;      /* Pink */
+    --bg: #0a0f25;          /* Deep Navy */
+    --dark-box: rgba(255, 255, 255, 0.05);
+}
+
+/* ------------------------------------
+   GLOBAL BODY
+------------------------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0f25, #101b3a);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* ------------------------------------
+   HEADER (Sticky)
+------------------------------------ */
+header {
+    background: #111a3e;
+    padding: 20px 40px;
+    border-bottom: 3px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+/* ------------------------------------
+   NAVIGATION
+------------------------------------ */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* PSEUDO-CLASS (HOVER) */
+nav a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent);
+}
+
+/* ------------------------------------
+   SECTION STYLING
+------------------------------------ */
+section {
+    background: var(--dark-box);
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+/* Absolute decor circle */
+section::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: var(--accent);
+    opacity: 0.15;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+/* ------------------------------------
+   HEADINGS
+------------------------------------ */
+h2 {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+h3 {
+    color: var(--accent);
+}
+
+/* ------------------------------------
+   IMAGE (Animation)
+------------------------------------ */
+img {
+    display: block;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 3px solid var(--primary);
+    animation: floatGlow 4s infinite ease-in-out;
+}
+
+/* Keyframe Animation */
+@keyframes floatGlow {
+    0% { transform: translateY(0); box-shadow: 0 0 10px var(--primary); }
+    50% { transform: translateY(-8px); box-shadow: 0 0 20px var(--accent); }
+    100% { transform: translateY(0); box-shadow: 0 0 10px var(--primary); }
+}
+
+/* ------------------------------------
+   TABLE STYLING
+------------------------------------ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: var(--accent);
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
+/* nth-child requirement */
+tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.1);
+}
+
+/* ------------------------------------
+   FORMS (Contact Page)
+------------------------------------ */
+label {
+    font-weight: 500;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: #0e1530;
+    color: white;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+/* BUTTON */
+button {
+    background: var(--accent);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+/* ------------------------------------
+   ASIDE
+------------------------------------ */
+aside {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #131b38;
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* ------------------------------------
+   FOOTER
+------------------------------------ */
+footer {
+    text-align: center;
+    background: #0d1430;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid var(--primary);
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px var(--accent);
+}
+
+/* ------------------------------------
+   AUDIO & VIDEO
+------------------------------------ */
+audio, video {
+    margin-top: 15px;
+    border-radius: 10px;
+    outline: 2px solid var(--accent);
+    padding: 5px;
+}

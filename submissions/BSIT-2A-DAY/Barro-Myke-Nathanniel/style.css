@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+  background-color: #0f0f0f;
+  color: #e5e5e5;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadein 0.7s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+nav a {
+  color: #d1d1d1;
+  text-decoration: none;
+  padding: 0 8px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #2b2b2b;
+  margin: 20px 0;
+}
+
+p, li, td, th, label {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+section, .content, center, table {
+  width: 90%;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.blog-html h2, .blog-html h3, .blog-html p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, td, th {
+  border: 1px solid #3a3a3a;
+}
+
+td, th {
+  padding: 10px;
+}
+
+ul {
+  list-style: square;
+  padding-left: 40px;
+}
+
+img, video, audio, center img, center video, center audio {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+input[type="text"], input[type="email"], textarea, select {
+  background-color: #1c1c1c;
+  border: 1px solid #3b3b3b;
+  color: #e5e5e5;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button, select {
+  background-color: #1c1c1c;
+  border: 1px solid #3b3b3b;
+  color: #e5e5e5;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 12px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, select:hover {
+  background-color: #2b2b2b;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+  transform: scale(1.1);
+  vertical-align: middle;
+}
+
+footer p, footer a {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: white;
+}

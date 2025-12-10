@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Me</title>
+</head>
+<body>
+    <header>
+        <h1>My Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <label><b>Name:</b> <input type="text" name="name" required></label><br><br>
+            
+            <label><b>Email:</b> <input type="email" name="email" required></label><br><br>
+            
+            <label><b>Phone Number:</b> <input type="tel" name="phonenumber" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></label><br><br>
+            
+            <laber><b>Birthday:</b> <input type="date" name="birthday"></laber><br><br>
+
+            <laber><b>Subject:</b>
+                <select name="subject">
+                    <option>General Inquiry</option>
+                    <option>Support</option>
+                    <option>Feedback</option>
+                    <option>Other</option>
+                </select>            
+            </laber><br><br>
+
+            <p><b>Preferred Contact Method:</b></p>
+            <label><input type="radio" name="contact" value="email">Email</label>
+            <label><input type="radio" name="contact" value="phone">Phone</label><br><br>
+            
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <label for="newsletter"><b>Subscribe to NewsLetter</b></label>
+            <br><br>
+
+            <label><b>Message:</b>
+                <textarea name="message" rows="5"></textarea>
+            </label><br><br>
+
+            <button type="reset"><b>Reset</b></button>
+            <button type="submit"><b>Submit</b></button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Elisha Caitlin M. Mascarinas. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

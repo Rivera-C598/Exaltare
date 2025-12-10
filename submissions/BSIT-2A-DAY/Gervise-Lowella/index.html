@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Simple & Observant</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------
+       1. Color Theme
+    ------------------- */
+    :root {
+      --primary-color: #B76E79;      /* Rose Pink */
+      --background-color: #FFF0F5;   /* Lavender Blush */
+      --accent-color: #C3B1E1;       /* Soft Lavender */
+    }
+
+    /* -------------------
+       General Styles
+    ------------------- */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: var(--background-color) url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: #444;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Soft shapes using pseudo-elements */
+    body::before, body::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    body::before {
+      width: 300px;
+      height: 300px;
+      top: 100px;
+      left: -100px;
+      background: var(--accent-color);
+    }
+
+    body::after {
+      width: 250px;
+      height: 250px;
+      bottom: 100px;
+      right: -80px;
+      background: var(--primary-color);
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(25px); }
+    }
+
+    /* -------------------
+       Header
+    ------------------- */
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 10px rgba(183, 110, 121, 0.4);
+      border-radius: 0 0 30px 30px;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.1em;
+    }
+
+    /* -------------------
+       About Section
+    ------------------- */
+    .about {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 40px;
+      border: 2px solid var(--accent-color);
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(195, 177, 225, 0.4);
+      position: relative; /* Positioning example */
+      animation: fadeIn 1.3s ease-in-out;
+    }
+
+    .about h2 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      text-align: center;
+      font-size: 1.05em;
+    }
+
+    /* -------------------
+       Button Styling
+    ------------------- */
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 25px;
+      font-weight: 600;
+      transition: background-color 0.4s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-color);
+      transform: scale(1.08);
+    }
+
+    .btn:focus {
+      outline: 3px solid var(--primary-color);
+    }
+
+    /* -------------------
+       Footer
+    ------------------- */
+    footer {
+      position: sticky;
+      bottom: 0;
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    /* -------------------
+       Animations
+    ------------------- */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Hello!And Welcome To My Page</h1> 
+    </h1>I'm Lowella G. Gervise  🌷</h1>
+    <p>A Simple and Observant Person</p>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm Lowella G.Gervise, a person who believes in the quiet power of observation. I find peace in the colors of nature — 
+      the gentle sway of flowers, the sound of leaves in the wind, and the warmth of soft sunlight. 🌿
+    </p>
+    <p>
+      I’m a simple girl who finds happiness in the gentle rhythm of the waves and the quiet beauty of nature. I love watching the sky change colors at sunset, feeling the sand beneath my feet, and listening to the whispers of the wind. 
+      I believe peace can be found in small moments — in blooming flowers, ocean tides, and honest smiles.
+    </p>
+    <p>
+      The beach gives me freedom, and the earth gives me peace. I try to live with a warm heart, an open mind, and a soul that shines softly, like morning light on the water.
+      I’m not in a rush — I live simply, love sincerely, and find meaning in the beauty that surrounds me every day.
+
+    <div style="text-align:center;">
+      <button class="btn">Let’s Connect 💌</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Lowella G. Gervise  — Blooming with Simplicity 🌸
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html"><mark>Contact</mark></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <form action="#" method="post">
+
+        <label for="name">Name: <strong>*</strong></label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email: <strong>*</strong></label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <label for="subject">Subject: <strong>*</strong></label><br>
+        <select id="subject" name="subject" required>
+          <option value="inquiry">General Inquiry</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="feedback">Feedback</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to my newsletter</label><br><br>
+        
+        <p>Preferred contact method:</p>
+        <input type="radio" id="contact-email" name="preferred" value="email" checked>
+        <label for="contact-email">Email</label><br>
+        <input type="radio" id="contact-phone" name="preferred" value="phone">
+        <label for="contact-phone">Phone</label><br><br>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Media</h2>
+
+      <h3>My Favorite Song While Working</h3>
+      <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p><cite>This song always motivates me to focus on my tasks.</cite></p>
+
+      <h3>My Favorite Flower</h3>
+      <video width="120" height="240" controls>
+        <source src="tulips.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><cite>Whenever I feel like giving up, this video reminds me why I started.</cite></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jacyl P. Roflo | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  background-color: #046d4d; 
+  font-family: 'Poppins', sans-serif;
+  color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #065f46;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #d4af37;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #ffffff15;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 15px;
+  border-left: 4px solid #d4af37;
+}
+
+h2 {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #f4f4f4;
+}
+
+p, li, td {
+  color: #e8e8e8;
+}
+
+
+img {
+  border-radius: 10px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #065f46;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #d4af37;
+}
+
+th {
+  background-color: #0a6e4f;
+  color: #f9f9f9;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d4af37;
+}
+
+/* Media Section */
+audio, video {
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Aside Section */
+aside {
+  background-color: #065f46;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background-color: #043c2c;
+  color: #d4af37;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+footer a {
+  color: #f9f9f9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d4af37;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main, aside, footer {
+  animation: fadeIn 1.2s ease-in-out;
+}

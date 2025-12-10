@@ -1,0 +1,205 @@
+/* === GENERAL STYLES === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #6db3f2, #1e69de);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(90deg, #0d324d, #7f5a83);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* === NAVIGATION === */
+nav {
+  margin-top: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+nav a {
+  color: #ffe600;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: orange;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+nav a:hover {
+  color: #ffa500;
+}
+
+/* === MAIN CONTAINER === */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* === ARTICLE BOXES === */
+.box {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+h2, h3, h4, h5 {
+  color: #1e69de;
+  border-bottom: 2px solid #1e69de;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* === ARTICLE STYLING === */
+article h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+article time {
+  display: block;
+  color: gray;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+article p, article ul, article ol {
+  line-height: 1.7;
+  margin: 10px 0;
+}
+ul, ol {
+  padding-left: 20px;
+}
+
+/* === ASIDE SECTIONS === */
+aside {
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+aside:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin: 8px 0;
+  padding: 5px;
+  border-left: 3px solid #1e69de;
+  transition: background 0.3s ease;
+}
+
+aside ul li:hover {
+  background: #eaf3ff;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+aside ul li a:hover {
+  color: #1e69de;
+}
+
+/* === QUOTES === */
+aside p {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-left: 4px solid #1e69de;
+  border-radius: 6px;
+  color: #333;
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(90deg, #0d324d, #7f5a83);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  animation: fadeIn 2s ease;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+}

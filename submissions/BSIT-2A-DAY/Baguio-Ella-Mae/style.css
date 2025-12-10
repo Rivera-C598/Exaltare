@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background-color: #F5F5DC;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 50px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 80%;
+  position: relative;
+}
+
+header img {
+  float: left;
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #C8A2C8;
+  margin-right: 50px;
+  box-shadow: 0 0 20px rgba(200, 162, 200, 0.3);
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+.header-text h1 {
+  color: #C8A2C8;
+  font-size: 70px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(200, 162, 200, 0.3);
+}
+
+.header-text h2 {
+  color: white;
+  font-size: 30px;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  width: 75%;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(200, 162, 200, 0.3);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  animation: fadeInPop 1.2s ease forwards;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.about:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 0 50px rgba(200, 162, 200, 0.8);
+}
+
+.about h2 {
+  font-size: 60px;
+  color: #C8A2C8;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 30px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.about blockquote {
+  background-color: rgba(200, 162, 200, 0.1);
+  border-left: 3px solid #C8A2C8;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-style: italic;
+  color: #C8A2C8;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 30px auto;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+  background-color: #C8A2C8;
+  color: black;
+}
+
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

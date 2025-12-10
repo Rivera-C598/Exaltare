@@ -1,0 +1,82 @@
+
+:root {
+  --primary-color: #b50a0a96;
+  --bg-color: #dd6d89;
+  --accent-color: #ed9cb3;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f296de, #bedbf7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2 {
+  color: var(--primary-color);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.about, .projects {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  background-color: rgb(215, 117, 183);
+  box-shadow: 0 8px 15px rgba(189, 95, 95, 0.05);
+}
+
+.card {
+  position: relative;
+  background-color: #8cdfd1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(52, 51, 51, 0.15);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: rgb(113, 171, 232);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d90429;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeInUp 1s ease both;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: rgba(62, 61, 103, 0.579);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact me</title>
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <form>
+        <!-- Name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Subject -->
+        <label for="subject">Subject:</label><br>
+        <select id="subject" name="subject">
+          <option value="inquiry">General Inquiry</option>
+          <option value="feedback">Feedback</option>
+          <option value="collaboration">Collaboration</option>
+        </select><br><br>
+
+        <!-- Message -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <!-- Birthday -->
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <!-- Newsletter -->
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label><br><br>
+
+        <!-- Preferred Contact -->
+        <p>Preferred Contact Method:</p>
+        <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+        <label for="contact-email">Email</label><br>
+        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+        <label for="contact-phone">Phone</label><br><br>
+
+        <!-- Submit -->
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  
+  <footer>
+    <p>&copy; 2025 Niño Jake B. Caputol | <a href="index.html">Back to Home</a></p>
+  </footer>
+</body>
+</html>

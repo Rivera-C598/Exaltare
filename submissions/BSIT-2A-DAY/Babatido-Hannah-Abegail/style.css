@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff;
+  color: darkblue;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: 'Lobster Two', cursive;
+  background-color: #3399ff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+  position: relative;
+  animation: slide-in 1.2s ease-out forwards;
+  margin: 20px;
+}
+
+@keyframes slide-in {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #001f4d;
+  text-decoration: underline;
+}
+
+section {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px black;
+  position: relative;
+}
+table {
+  background-color: white;          
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px black;
+  margin: 10px auto;
+  width: 80%;
+}
+
+th, td {
+  background-color: white;          
+  border: 1px solid #003366;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #3399ff;      
+  color: white;
+}
+audio, video {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+}
+
+footer {
+  background-color: #3399ff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+  margin: 20px;
+  position: relative;
+  bottom: 0;
+}
+
+p:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+audio:focus, video:focus {
+  outline: 2px solid #001f4d;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+h2 {
+  color: black;
+}
+hr {
+  margin: 15px 0;
+}

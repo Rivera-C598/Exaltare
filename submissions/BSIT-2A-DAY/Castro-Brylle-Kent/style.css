@@ -1,0 +1,169 @@
+:root {
+  --primary-color: navy;
+  --background-color: white;
+  --accent-color: yellow;
+  --text-color: darkblue;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.5s ease-in-out;
+}
+
+h1, h2, h3 {
+  font-family: 'Lucida Console', monospace;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+header {
+  background: linear-gradient(135deg, var(--primary-color), #2563eb);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header img {
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+section {
+  background-image: url('https://img.freepik.com/free-vector/abstract-blue-watercolor-decorative-background-design_1055-13787.jpg');
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  background-size: cover;
+}
+section:hover {
+  border: 3px solid var(--accent-color);
+  transition: border 0.3s ease;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 8px 0;
+  font-weight: 500;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 1rem auto;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: var(--primary-color);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f9fafb;
+}
+button {
+  background: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #ffe45c;
+  transform: translateY(-3px);
+}
+
+input, textarea, select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 5px var(--accent-color);
+}
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+}
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section {
+  animation: fadeInUp 0.8s ease both;
+}
+@media (max-width: 600px) {
+  header img {
+    width: 150px;
+    height: 150px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}

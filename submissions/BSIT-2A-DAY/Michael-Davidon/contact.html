@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Michael L. Davidon</title>
+  <link rel="stylesheet" href="style.css">
+
+  <video autoplay muted loop id="bgVideo">
+  <source src="videos/Minecraft bg vid.mp4" type="video/mp4">
+</video>
+
+</head>
+<body>
+
+<header>
+  <h1>Contact Me</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+  <hr>
+</header>
+
+<main>
+  <section>
+    <h2>Get in Touch</h2>
+    <form>
+      <p>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+      </p>
+      <p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+      <p>
+        <label for="subject">Subject:</label><br>
+        <select id="subject" name="subject">
+          <option value="inquiry">General Inquiry</option>
+          <option value="project">Project Collaboration</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </p>
+      <p>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </p>
+      <p>
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone">
+      </p>
+      <p>
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday">
+      </p>
+      <p>
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label>
+      </p>
+      <p>
+        Preferred contact method: <br>
+        <input type="radio" id="emailContact" name="contactMethod" value="email">
+        <label for="emailContact">Email</label>
+        <input type="radio" id="phoneContact" name="contactMethod" value="phone">
+        <label for="phoneContact">Phone</label>
+      </p>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Michael L. Davidon. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

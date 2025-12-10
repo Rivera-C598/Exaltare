@@ -1,0 +1,12 @@
+# Node
+node_modules/
+.env
+
+# Tooling
+.DS_Store
+Thumbs.db
+
+# Exaltare Admin Tool
+reviewer.html
+css/review.css
+js/reviewer.js

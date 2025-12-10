@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="stylescontact.css">
+   <link rel="icon" href="icon.png" type="image/png">
+  
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</nav>
+  </header>
+
+    <h1 class="contact">Contact Us</h1>
+  <main>
+    <form>
+      <!-- Name -->
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <!-- Email -->
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Phone -->
+      <label for="phone">Phone:</label><br>
+      <input type="tel" id="phone" name="phone"><br><br>
+
+      <!-- Subject Dropdown -->
+      <label for="subject">Subject:</label><br>
+      <select id="subject" name="subject">
+        <option value="general" class="option">General Inquiry</option>
+        <option value="support" class="option">Support</option>
+        <option value="collaboration" class="option">Collaboration</option>
+      </select><br><br>
+
+      <!-- Message -->
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+      <!-- Newsletter -->
+      <input type="checkbox" id="newsletter" name="newsletter">
+      <label for="newsletter">Subscribe to newsletter</label><br><br>
+
+      <!-- Submit -->
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Haji . All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

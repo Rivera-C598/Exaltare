@@ -1,0 +1,116 @@
+/* ====== Color Theme ====== */
+/* Primary: #6C63FF | Background: #F9F5FF | Accent: #FFB6C1 */
+
+:root {
+  --primary: #6C63FF;
+  --background: #F9F5FF;
+  --accent: #FFB6C1;
+  --text-dark: #333;
+}
+
+/* ====== Global Styles ====== */
+body {
+  font-family: 'Poppins', sans-serif; /* Custom Google Font */
+  background-color: var(--background);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ====== Header ====== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Box Shadow */
+  position: sticky;
+  top: 0; /* Positioning */
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Text Shadow */
+  margin-bottom: 10px;
+}
+
+/* ====== Sections ====== */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* About Section */
+.about {
+  background-color: white;
+  border: 2px solid var(--accent);
+  border-radius: 15px; /* Border Radius */
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid var(--primary);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 5px 10px rgba(108, 99, 255, 0.2);
+  transition: transform 0.3s ease; /* Transition */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Pseudo-class + Animation effect */
+}
+
+/* Buttons */
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary); /* Pseudo-class hover */
+}
+
+/* Contact Section */
+.contact {
+  background: var(--accent);
+  color: white;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 15px 0;
+  position: relative;
+}
+
+/* ====== Animation Example ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+

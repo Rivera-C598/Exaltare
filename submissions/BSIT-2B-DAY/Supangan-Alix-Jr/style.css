@@ -1,0 +1,344 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg: #0b1220;
+  --surface: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #22d3ee;
+  --accent: #a78bfa;
+  --ring: rgba(34,211,238,.45);
+  --border: rgba(148,163,184,.25);
+  --shadow: rgba(2,6,23,.55);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #1e293b 0%, transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, #0ea5e9 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg), #0a0f1d 65%);
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+/* --- Header (Sticky + Scroll Fade + Center Alignment) --- */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background: rgba(11,18,32,.65);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 1rem;
+  box-shadow: 0 8px 20px var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* --- Avatar (Profile Image) --- */
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(167,139,250,.35);
+  object-fit: cover;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* --- Headings --- */
+h1, h2, h3 {
+  line-height: 1.1;
+  letter-spacing: .5px;
+  text-shadow: 0 2px 8px rgba(34,211,238,.2);
+}
+h1 { color: var(--primary); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3rem); }
+h2 { color: var(--primary); font-weight: 700; font-size: clamp(1.4rem, 2.5vw, 2rem); }
+h3 { color: var(--accent); font-weight: 600; }
+
+/* --- Card Elements --- */
+main, aside, footer, section, table, .card {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(1rem, 3vw, 2rem);
+  margin: clamp(1rem, 3vw, 2rem);
+  box-shadow: 0 20px 45px var(--shadow);
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  gap: clamp(.5rem, 2vw, 1rem);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: .75rem;
+}
+nav a {
+  color: var(--text);
+  padding: .55rem .9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, color .25s ease;
+}
+nav a:hover, nav a:focus {
+  color: var(--primary);
+  border-color: var(--ring);
+  box-shadow: 0 10px 25px rgba(34,211,238,.25);
+  transform: translateY(-1px);
+}
+nav a:active { transform: translateY(0); opacity: .9; }
+
+/* --- Tables --- */
+table { width: 100%; border-collapse: collapse; overflow: hidden; }
+th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+th { text-align: left; color: var(--text); background: rgba(167,139,250,.12); }
+tbody tr:nth-child(even) { background: rgba(255,255,255,.03); }
+tbody tr:hover { background: rgba(34,211,238,.06); transition: background .25s ease; }
+
+/* --- Buttons --- */
+input[type="submit"], .btn {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #0b1220;
+  font-weight: 700;
+  padding: .8rem 1.1rem;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(34,211,238,.25);
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+input[type="submit"]:hover, .btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+input[type="submit"]:focus, .btn:focus {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* --- Inputs --- */
+input, textarea, select {
+  width: 100%;
+  padding: .8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+  color: var(--text);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+  outline: none;
+}
+
+/* --- Misc --- */
+aside { border-left: 4px solid var(--accent); }
+footer { text-align: center; color: var(--muted); background: rgba(15,23,42,.6); }
+
+.badge {
+  display: inline-block;
+  padding: .25rem .6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+
+
+/* --- Float only on Blog and Contact pages --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Apply animation on blog.html and contact.html headers only */
+header.site-header:has(a[aria-current="page"][href="blog.html"]) h1,
+header.site-header:has(a[aria-current="page"][href="contact.html"]) h1 {
+  animation: float 3s ease-in-out infinite;
+
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+  header.site-header { padding: 1rem; }
+  main, section, aside, footer { margin: .8rem; padding: 1rem; }
+  nav { gap: .5rem; }
+}
+
+/* --- Profile Layout --- */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: .5rem;
+}
+
+/* --- Prevent content from hiding behind header --- */
+:root { --header-h: 120px; }
+body { padding-top: var(--header-h); }
+:is(h1, h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--header-h); }
+
+@media (max-width: 768px) {
+  :root { --header-h: 100px; }
+}
+
+/* --- Center top-level blog headers --- */
+body > header:not(.site-header){
+  text-align: center;
+  padding: 2rem 1rem;
+}
+body > header:not(.site-header) h1{
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Fade/Slide header on scroll --- */
+@supports (animation-timeline: scroll()) {
+  @keyframes hideHeader {
+    0%   { opacity: 1; transform: translateY(0); filter: none; }
+    100% { opacity: 0; transform: translateY(-48px); filter: blur(6px); }
+  }
+
+  header.site-header {
+    animation: hideHeader linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 30vh;
+    will-change: opacity, transform, filter;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  header.site-header { transition: opacity .2s ease; }
+}
+
+/* --- Blog Article Hover Glow (neon + lift) --- */
+article {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 15px 35px var(--shadow);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+article:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 35px rgba(34,211,238,.35), 0 0 12px rgba(167,139,250,.25);
+  transform: translateY(-4px);
+}
+article h2 {
+  color: var(--primary);
+  margin-bottom: .5rem;
+}
+article time {
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* --- Aside (Related Reads) polish + hover harmony --- */
+aside {
+  max-width: 900px;
+  margin: 2rem auto;
+  border-left: 4px solid var(--accent);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+aside:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 0 26px rgba(34,211,238,.25), 0 18px 45px var(--shadow);
+}
+aside h3 { margin-top: 0; color: var(--accent); }
+aside ul { padding-left: 1.2rem; margin: .5rem 0 0; }
+aside a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color .25s ease, border-color .25s ease;
+}
+aside a:hover, aside a:focus {
+  color: var(--primary);
+  border-color: var(--ring);
+}
+/* === Neon Glow for HOME (index.html) sections only === */
+body:has(header.site-header a[aria-current="page"][href="index.html"]) section,
+body:has(header.site-header a[aria-current="page"][href="index.html"]) aside {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow:
+    0 0 25px rgba(34,211,238,.25),      /* outer glow */
+    inset 0 0 12px rgba(34,211,238,.10); /* inner glow */
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+body:has(header.site-header a[aria-current="page"][href="index.html"]) section:hover,
+body:has(header.site-header a[aria-current="page"][href="index.html"]) aside:hover {
+  border-color: var(--primary);
+  box-shadow:
+    0 0 40px rgba(34,211,238,.40),
+    inset 0 0 14px rgba(167,139,250,.25);
+  transform: translateY(-4px);
+}
+
+
+/* === Fix radio/checkbox alignment and spacing === */
+
+/* Make any label that contains an input align nicely */
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;                 /* space between circle and text */
+  line-height: 1.3;
+  margin: .25rem .75rem .25rem 0; /* small breathing room */
+}
+
+/* Uniform size + theme color for radios/checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent); /* uses your theme color */
+  flex: 0 0 auto;              /* prevents stretching */
+}
+
+/* In the “Preferred Contact Method” field:
+   put labels on one line, keep the title above them */
+.field .label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+/* Keep the row of radio choices tidy and centered vertically */
+.field .label + label,
+.field .label + label + label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Optional: ensure the whole radio row wraps nicely on small screens */
+.field {
+  display: block;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Contact Me</h1>
+
+  <nav>
+    <a href="http://127.0.0.1:5501/Index.html">Home</a> |
+    <a href="http://127.0.0.1:5501/Blog.html">Blog</a> |
+    <a href="http://127.0.0.1:5501/Contact.html">Contact</a>
+  </nav>
+
+  <form>
+
+    <p>
+      <label>Name:</label><br>
+      <input type="text" name="name">
+    </p>
+
+    <p>
+      <label>Email:</label><br>
+      <input type="email" name="email">
+    </p>
+
+    <p>
+      <label>Subject:</label><br>
+      <select name="subject">
+        <option>General Inquiry</option>
+        <option>Feedback</option>
+        <option>Collaboration</option>
+      </select>
+    </p>
+
+    <p>
+      <label>Message:</label><br>
+      <textarea rows="4" cols="40" name="message"></textarea>
+    </p>
+
+    <p>
+      <label>Phone:</label><br>
+      <input type="tel" name="phone">
+    </p>
+
+    <p>
+      <label>Birthday:</label><br>
+      <input type="date" name="birthday">
+    </p>
+
+    <p>
+      <input type="checkbox" name="newsletter"> Subscribe to Newsletter
+    </p>
+
+    <input type="radio" name="contactMethod" value="email"> Email
+    <input type="radio" name="contactMethod" value="phone"> Phone
+
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+
+  <footer>
+    <p>© 2025 Kathleen Claire J. Habla | Contact Page</p>
+  </footer>
+
+</body>
+</html>

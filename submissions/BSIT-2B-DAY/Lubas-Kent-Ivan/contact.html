@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Keania+One&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Contact Page</h1>
+         <nav>
+        <ul>
+            <li>
+                <a href ="index.html">Home</a>
+            </li>
+            <li>
+                <a href ="blog.html">Blog</a>
+            </li>
+            <li>
+                <a href ="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="contact">
+        <form action="#" method="post">
+            <label for="user-name">Name:</label>
+            <input type="text"> <br>
+            <label for="email">Email:</label>
+            <input type="email"> <br>
+            <label for="phone">Phone:</label> 
+            <input type="tel"/> <br>
+            <label for="birthday">Brthday:</label> 
+            <input type="date"/> <br>
+            <label>Your Country :</label>
+            <select id="country-select" name="country">
+            <option value="usa">United States</option>
+            <option value="can">Canada</option>
+            <option value="mex">Mexico</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ph">Philippines</option>
+            </select>
+            
+            <input type="checkbox">
+            
+             <p>Preferred contact method:</p>
+            <div>
+            <input type="radio" id="contact-email" name="contact_method" value="email" required>
+            <label for="contact-email">Email</label>
+
+            <input type="radio" id="contact-phone" name="contact_method" value="phone">
+            <label for="contact-phone">Phone Call</label>
+  
+            </div>
+            
+            
+             <label for="message">Your Message </label>
+             <textarea></textarea>
+            
+            <div>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Kent Ivan B. Lubas, Codes. All Rights Reserved.</p>
+    
+    </footer>
+</body>
+</html>

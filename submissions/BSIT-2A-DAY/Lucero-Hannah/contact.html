@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+<link rel="stylesheet" href="portfolio.css">
+<link href='https://fonts.googleapis.com/css?family=Agbalumo' rel='stylesheet'>
+<body>
+
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+
+      <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Subject:</label><br>
+        <select id="subject" name="subject">
+          <option value="general">General Inquiry</option>
+          <option value="feedback">Feedback</option>
+          <option value="support">Support</option> 
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <label>
+          <input type="checkbox" name="newsletter"> Subscribe to Newsletter
+        </label><br><br>
+
+        <p>Preferred Contact Method:</p>
+        <label><input type="radio" name="contact-method" value="email" checked> Email</label>
+        <label><input type="radio" name="contact-method" value="phone"> Phone</label><br><br>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Contact Me: hannahlucero873@gmail.com</strong><br>
+    <a href="https://accounts.google.com/login?service=mail">Gmail</a>
+    <p>&copy; 2025 Hannah Lozano Lucero. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

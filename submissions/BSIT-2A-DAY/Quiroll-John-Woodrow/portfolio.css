@@ -1,0 +1,323 @@
+body {
+  font-family: 'Castoro Titling';font-size: 22px;
+  background: var(--background);
+  color: #2b2b2b; 
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: black;         
+  --accent: blue;          
+  --background: white;      
+}
+
+header {
+  background-color: var(--background);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header img {
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  transition: transform 0.3s ease; 
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+header h1 {
+  color: var(--primary);
+  text-shadow: 2px 2px 5px rgba(90,45,12,0.3);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+/* Main Sections */
+main {
+  background-color: var(--background);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-color: black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+ 
+}
+
+th {
+  background-color: var(--accent);
+  color: white;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: var(--accent);
+  width: auto;
+  margin: 10px auto;
+  border-radius: 3px;
+}
+
+
+/* Aside */
+aside {
+  background-color: var(--accent);
+  color: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+aside a{
+  color: white;
+}
+/* Media Section */
+#media {
+  background: linear-gradient(90deg,rgba(0, 0, 255, 0.3) 35%, rgba(0, 0, 0, 0.06) 100%);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 20px 100px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#media h2, #media h3 {
+  color: var(--primary);
+}
+
+#media audio {
+  width: 50%;
+  margin: 10px 0;
+  outline: none;
+  border-radius: 15px;              
+  border: 3px solid var(--accent);  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+  
+}
+#media audio:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/*Style the video nicely */
+#media video {
+  display: block;
+  margin: 15px auto;
+  border-radius: 15px;              
+  border: 3px solid var(--accent); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for fun */
+#media video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: #fff8e1;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Simple Animation */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px var(--accent); }
+  50% { box-shadow: 0 0 20px var(--accent); }
+  100% { box-shadow: 0 0 5px var(--accent); }
+}
+
+header img:hover {
+  animation: glow 1.5s infinite; /* Animation on hover */
+}
+
+/* ====== Responsive Image Centering ====== */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ====== BLOG CSS ====== */
+article img {
+  display: block;
+  margin: 15px auto;              
+  width: 350px;                 
+  border-radius: 8px;          
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+article img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+video{
+  display: block;
+  margin: 0 auto;
+}
+
+article video{
+  margin: 15px auto;              
+  width: 350px;                 
+  border-radius: 8px;          
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Add spacing between image and text */
+article p,
+article ul,
+article blockquote {
+  margin-bottom: 15px;
+}
+
+v
+
+/* ====== Contact Form Styling ====== */
+form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto; 
+  border: 2px solid var(--primary);
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs, Select, and Textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  font-family: 'Aclonica';font-size: 22px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(70, 162, 199, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background-color: var(--accent);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button Hover */
+button:hover {
+  background-color: #3b91b5;
+  transform: scale(1.05);
+}
+
+/* Section styling for spacing */
+main section {
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+/* Optional HR styling for accent separation */
+section hr {
+  border: none;
+  
+  border-top: 3px solid var(--accent);
+  width: 80%;
+  margin: 20px auto;
+}
+

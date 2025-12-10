@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Janninry Chris Anore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <h1>Janninry Chris Anore - Contact</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Me</h2>
+      <p>If you’d like to reach out, fill in the form below. <em>All fields marked with * are required.</em></p>
+
+      <form id="contact-form">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+        <label for="subject">Subject *</label>
+        <select id="subject" name="subject" required>
+          <option value="">--Select--</option>
+          <option value="inquiry">General Inquiry</option>
+          <option value="feedback">Feedback</option>
+          <option value="collaboration">Collaboration</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Type your message here"></textarea>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="+63 912 345 6789">
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <fieldset>
+          <legend>Preferred Contact Method</legend>
+          <input type="radio" id="contact-email" name="contactMethod" value="Email" checked>
+          <label for="contact-email">Email</label>
+
+          <input type="radio" id="contact-phone" name="contactMethod" value="Phone">
+          <label for="contact-phone">Phone</label>
+        </fieldset>
+
+        <label>
+          <input type="checkbox" name="newsletter">
+          Subscribe to newsletter
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Janninry Chris Anore. All rights reserved.</p>
+    <p>
+      <a href="https://www.facebook.com/garakadoi">Facebook</a> |
+      <a href="https://www.instagram.com/yojca_">Instagram</a> |
+      <a href="https://www.tiktok.com/@koahellouttoken">TikTok</a>
+    </p>
+  </footer>
+
+</body>
+</html>
