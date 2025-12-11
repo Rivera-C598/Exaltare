@@ -1,11 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. HELPERS
 const SUBMISSIONS_DIR = path.join(__dirname, 'submissions');
 const DATA_FILE = path.join(__dirname, 'js', 'data.js');
 
-// Load existing data to preserve comments/tags
 let existingData = {};
 try {
     const data = require(DATA_FILE);
@@ -15,11 +13,9 @@ try {
     console.log("⚠️ Could not load existing data.js (Creating fresh)");
 }
 
-// 2. SCAN FOLDERS
 const newShowcaseGroups = [];
 const newReviewQueue = [];
 
-// Get all Section folders (e.g., "BSIT 2A")
 if (fs.existsSync(SUBMISSIONS_DIR)) {
     const sections = fs.readdirSync(SUBMISSIONS_DIR, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory());
@@ -33,18 +29,15 @@ if (fs.existsSync(SUBMISSIONS_DIR)) {
             projects: []
         };
 
-        // Get all Students in this Section
-        const students = fs.readdirSync(sectionPath, { withFileTypes: true })
+            const students = fs.readdirSync(sectionPath, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory());
 
         students.forEach(student => {
-            const studentName = student.name; // Folder name is Student Name
+            const studentName = student.name;
             const studentPathInt = `./submissions/${sectionName}/${studentName}/index.html`;
 
-            // Check if we have existing metadata for this specific path
             let existingProject = null;
             
-            // Search in existing groups
             if (existingData.showcaseGroups) {
                 for (const g of existingData.showcaseGroups) {
                     const found = g.projects.find(p => p.path === studentPathInt);
@@ -55,7 +48,6 @@ if (fs.existsSync(SUBMISSIONS_DIR)) {
                 }
             }
 
-            // AUTO-DETECT THUMBNAIL
             let detectedThumb = "assets/placeholder.jpg";
             try {
                 const studentFiles = fs.readdirSync(path.join(sectionPath, studentName));
@@ -64,16 +56,13 @@ if (fs.existsSync(SUBMISSIONS_DIR)) {
                     detectedThumb = `./submissions/${sectionName}/${studentName}/${imageFile}`;
                 }
             } catch (err) {
-                // Ignore error, keep placeholder
             }
 
-            // Build Project Object
             const projectObj = {
                 id: existingProject ? existingProject.id : 'id_' + Math.random().toString(36).substr(2, 9),
-                studentName: studentName, // Folder name
+                studentName: studentName,
                 projectTitle: existingProject ? existingProject.projectTitle : "Portfolio",
                 thumbnail: existingProject ? existingProject.thumbnail !== "assets/placeholder.jpg" ? existingProject.thumbnail : detectedThumb : detectedThumb, 
-                // Logic above: If existing has a real thumb, keep it. Else use detected.
                 path: studentPathInt,
                 teacherComment: existingProject ? existingProject.teacherComment : "",
                 tags: existingProject ? existingProject.tags : ['New']
@@ -81,12 +70,11 @@ if (fs.existsSync(SUBMISSIONS_DIR)) {
 
             groupObj.projects.push(projectObj);
 
-            // Add to Review Queue (Flat list)
             newReviewQueue.push({
                 id: projectObj.id,
                 name: studentName,
                 path: studentPathInt,
-                group: sectionName // Added for filtering
+                group: sectionName
             });
         });
 
@@ -98,7 +86,6 @@ if (fs.existsSync(SUBMISSIONS_DIR)) {
     console.log("❌ 'submissions' folder not found!");
 }
 
-// 3. WRITE FILE
 const FINAL_CONFIG = {
     reviewQueue: newReviewQueue,
     showcaseGroups: newShowcaseGroups

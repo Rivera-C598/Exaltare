@@ -61,45 +61,25 @@ const server = http.createServer((req, res) => {
 });
 
 function handleSave(payload, res) {
-    // payload: { id, studentName, projectTitle, teacherComment, tags }
 
-    // 1. Read existing file
     let fileContent = fs.readFileSync(DATA_FILE, 'utf8');
     
-    // We need to parse the CONFIG object from the file string. 
-    // Since it's a JS file, not JSON, we can't just JSON.parse it.
-    // However, our `generate.js` writes it as `const CONFIG = JSON...`.
-    // So we can try to find the JSON part.
-    
-    // Safety check: Does it look like our generated file?
-    /*
-        const CONFIG = {
-            ...
-        };
-    */
-    
-    // STRATEGY: instead of complete re-write which might be risky with regex,
-    // lets rely on the fact that `generate.js` writes valid JSON structure inside `const CONFIG = ... ;`
-    
-    // Actually, to be safe and robust, let's just load the module, modify the object, and re-write the file entirely using the SAME template as generate.js.
     
     try {
-        // Clear cache to ensure we read latest
         delete require.cache[require.resolve(DATA_FILE)];
         const currentConfig = require(DATA_FILE);
 
         let found = false;
 
-        // Find and Update in ShowcaseGroups
         if (currentConfig.showcaseGroups) {
             for (const group of currentConfig.showcaseGroups) {
                 const project = group.projects.find(p => p.id === payload.id);
                 if (project) {
                     project.projectTitle = payload.projectTitle;
                     project.teacherComment = payload.teacherComment;
-                    project.tags = payload.tags; // Array
+                    project.tags = payload.tags; 
                     found = true;
-                    // Note: We don't update path/thumbnail/name here usually, as those are filesystem based.
+                    
                 }
             }
         }
@@ -110,7 +90,6 @@ function handleSave(payload, res) {
             return;
         }
 
-        // Re-construct the file content
         const newFileContent = `// This file acts as your "Database".
 // You edit this to add new students.
 
