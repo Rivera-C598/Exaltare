@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT US</title>
+  <link rel="icon" type="image/png" href="image/contacts.png">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body class="contact">
+  <header class="menu">
+    <h1>CONTACT ME</h1>
+    <img src="image/ContactPic.png" alt="MyProfile">
+    <nav>
+      <a href="index.html" >Home</a>
+           <a href="blog.html" >Blog</a>
+           <a href="works.html" >Works</a>
+           <a href="contact.html" >Contact</a>
+    </nav>
+    <audio controls title="Contact Audio">
+                <source src="song/ContactAudio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+      </audio>
+  </header>
+  <main>
+    <hr>
+    <section>
+      <h2 class="section">Get in Touch</h2>
+      <p>
+        Please fill out the form below. Fields marked with <mark>*</mark> are required.  
+        Your details will be kept <strong>confidential</strong>.
+      </p>
+
+      <form action="#" method="post">
+        <label for="name"><strong>Name:</strong></label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email"><strong>Email:</strong></label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone"><strong>Phone:</strong></label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="birthday"><strong>Birthday:</strong></label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <hr>
+
+        <label for="subject"><strong>Subject:</strong></label><br>
+        <select id="subject" name="subject">
+          <option value="feedback">Feedback</option>
+          <option value="support">Support</option>
+          <option value="collaboration">Collaboration</option>
+        </select><br><br>
+
+        <label for="message"><strong>Message:</strong></label><br>
+        <textarea id="message" name="message" rows="10" cols="50"></textarea><br><br>
+
+        <hr>
+
+        <h2 class="section">Preferred Contact Method</h2>
+        <input type="radio" id="contact-email" name="contact-method" value="email">
+        <label for="contact-email">Email</label><br>
+        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+        <label for="contact-phone">Phone</label><br><br>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <cite>Rica A. Leonor</cite>. All rights reserved.</p>
+    <p>Connect with me: 
+      <a href="https://www.facebook.com/cangshisy" target="_blank">Facebook</a> | 
+      <a href="https://www.instagram.com/cangshisy?igsh=aDR3N3I3NDF5NGw0" target="_blank">Instagram</a> | 
+      <a href="https://github.com/shisy-18" target="_blank">GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>

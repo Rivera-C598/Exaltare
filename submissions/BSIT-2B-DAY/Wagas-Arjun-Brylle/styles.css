@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary: #ff9900;
+    --background: #0d0d0d;
+    --accent: #1a1a1a;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--accent);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+main, section, article {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--accent);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main:hover, section:hover, article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+
+h2, h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+p, li, td, th, label {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+img, video, audio {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+button, input[type="submit"] {
+    background-color: var(--primary);
+    color: var(--background);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #111;
+    border: 1px solid #333;
+    color: var(--text);
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+footer {
+    background-color: var(--accent);
+    text-align: center;
+    padding: 20px;
+    color: var(--text);
+    margin-top: 40px;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.4);
+}
+
+a {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e68a00;
+}
+
+blockquote {
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+mark {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main, section, article {
+    animation: fadeIn 0.8s ease forwards;
+}

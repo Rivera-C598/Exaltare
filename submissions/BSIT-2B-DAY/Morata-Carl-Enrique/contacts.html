@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+       <h1> CONTACTS </h1>
+       
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+    </header>
+
+    <main>
+       <!-- contact form -->
+<form action="#" method="post">
+    <!-- input type: name -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- input type: email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- input type: phone (format) -->
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="09-000-000-000" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br><br>
+
+    <!-- input type: birthday -->
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+
+    <!-- subject dropdown -->
+    <label for="subject">Subject:</label>
+    <select id="subject" name="subject">
+        <option value="">--Please choose an option--</option>
+        <option value="general">General Inquiry</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+    </select><br><br>
+
+    <!-- preferred contact method (radio buttons) -->
+    <p>Preferred Contact Method:</p>
+    <input type="radio" id="contact_email" name="contact_method" value="email" checked>
+    <label for="contact_email">Email</label><br>
+    <input type="radio" id="contact_phone" name="contact_method" value="phone">
+    <label for="contact_phone">Phone</label><br><br>
+
+    <!-- newsletter subscription (checkbox) -->
+    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+    <label for="subscribe">Subscribe to our newsletter</label><br><br>
+
+    <!-- message textarea -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your message here..."></textarea><br><br>
+
+    <!-- submit button -->
+    <button type="submit">Submit</button>
+</form>
+
+    </main>
+
+    <footer>
+        <!-- add copyright notice thingy-->
+    </footer>
+</body>
+</html>

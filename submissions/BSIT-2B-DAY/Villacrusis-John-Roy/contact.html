@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - John Rhoy</title>
+    <link rel="icon" type="image/png" href="C:\Users\admin\Documents\VSCODE\image\Rhoy.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact">
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<hr>
+    <main>
+        <h2>Get in Touch</h2>
+        <form>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="subject">Subject</label><br>
+            <select name="subject" id="subject">
+                <option>General Inquiry</option>
+                <option>Collaboration</option>
+                <option>Feedback</option>
+            </select><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+            <label for="phone">Phone#:</label><br>
+            <input type="tel" name="phone" id="phone"><br><br>
+
+            <label for="birthday">Birthday:</label><br>
+            <input type="date" name="birthday" id="birthday"><br><br>
+
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <label for="newsletter">Subscribe to NewsLetter</label>
+
+            <p>Preferred Contact Method</p>
+                <div class="contact-method-group">
+                <input type="radio" id="contact-email" name="contact-method" value="email">
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label>
+            </div>
+            <br><br>
+        
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2025 John Rhoy Villacrucis | All Rights Reserved</p>
+        <p>Follow me on</p>
+        <a href="https://www.instagram.com/rhoy636/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/john.villa.961556/" target="_blank">Facebook</a>
+    </footer>
+</body>
+</html>

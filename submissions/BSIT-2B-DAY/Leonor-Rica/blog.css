@@ -1,0 +1,120 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+/* === HEADER === */
+header {
+  text-align: center;
+  background: linear-gradient(to bottom, #1a0000, #0d0d0d);
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #b30000;
+  position: sticky;
+
+}
+header h2 {
+  font-family: 'Cinzel', serif;
+  color: #b30000;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  letter-spacing: 2px;
+}
+header img {
+  border: 3px solid #b30000;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+/* === NAVIGATION === */
+nav a {
+  color: #ffb347;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #fff;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #b30000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* === ARTICLE SECTION === */
+main {
+  padding: 2rem 10%;
+}
+
+article {
+  background-color: #1a1a1a;
+  border: 1px solid #b30000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+  animation: fadeIn 1.5s ease;
+}
+
+article h3 {
+  font-family: 'Cinzel', serif;
+  color: #ffb347;
+}
+
+blockquote {
+  border-left: 4px solid #b30000;
+  padding-left: 1rem;
+  color: #ffb347;
+  font-style: italic;
+  margin: 1.2rem 0;
+}
+
+/* === ASIDE SECTION === */
+aside {
+  background-color: #1a0000;
+  border-radius: 8px;
+  padding: 1.2rem;
+  border: 1px solid #b30000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+}
+
+aside h3 {
+  color: #ffb347;
+  text-align: center;
+}
+
+aside a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+aside a:hover {
+  color: #ffb347;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0d0d0d;
+  border-top: 1px solid #b30000;
+  font-size: 0.9rem;
+  color: #777;
+}
+footer a:hover {
+    color: #f5eaed;
+}

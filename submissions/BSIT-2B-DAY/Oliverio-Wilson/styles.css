@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/*header*/
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #142850;    
+    color: #fff;                  
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 30px;
+    background: linear-gradient(135deg, #36a4e7 0.5%, #142850 100%, #36a4e7 100% ); 
+    box-shadow: 0 0 10px #36a4e7;
+    color: #fff; 
+}
+
+/*navigation*/
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #36a4e7;                
+    font-weight: 700;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+}
+
+nav a:hover,
+nav a:focus {
+    border-color: #fff;            
+    background-color: #36a4e7;     
+    color: #142850;                
+    outline: none;
+}
+
+/*home page*/
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0F3057;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #36a4e7;    
+    border-radius: 10px;
+    background: linear-gradient(135deg, #142850 0%, #36a4e7 100%); 
+    color: #fff;                   
+}
+
+main img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #36a4e7;     
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.6); 
+}
+
+.about-me p {
+    padding: 5px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    margin: 20px auto;
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.about-me img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 4px solid #fff;        
+}
+
+.hobbies {
+    padding-top: 10px;
+}
+
+.hobbies ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.hobbies ul li{
+    padding: 10px 15px;
+    position: relative;
+    margin-left: 25px;
+}
+
+.hobbies ul li::before {
+    content: "✔";
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid #050505;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #142850;
+}
+
+.media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.music-player {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(54, 164, 231, 0.7);
+    background-color: #0F3057;
+}
+
+.video-player {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(54, 164, 231, 0.7);
+}
+
+ aside{
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0F3057;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+ }
+
+ footer{
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0F3057;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+ }
+
+footer {
+    text-align: center;
+}
+
+footer {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0F3057;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Blog Articles */
+article {
+    background: linear-gradient(135deg, #0F3057 0%, #1E90FF 100%);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(54, 164, 231, 0.6);
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    color: #e0eaff;
+}
+
+.First-Blog p {
+    padding: 5px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    margin: 20px auto;
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.Struggles p {
+    padding: 5px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    margin: 20px auto;
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+article h2 {
+    color: #b3d4fc;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #36a4e7;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+
+article time {
+    color: #a3c9fd;
+    font-style: italic;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.Blog-Aside ul li{
+    padding: 10px 15px;
+    position: relative;
+    margin-left: 25px;
+}
+
+.Blog-Aside li a {
+    color: #36a4e7;
+    text-decoration: none;
+    font-weight: 600;
+
+    
+}
+
+/* Contact Form */
+form {
+    background: #142850;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(20, 40, 80, 0.8);
+    color: #fff;
+    font-size: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #36a4e7;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 2px solid #36a4e7;
+    border-radius: 8px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    color: #142850;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px #1e90ff;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form p {
+    margin: 15px 0 8px;
+    font-weight: 600;
+    color: #36a4e7;
+}
+
+form label input[type="radio"],
+form label input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #36a4e7;
+    color: #142850;
+    font-weight: 700;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #1e90ff;
+    color: #fff;
+    outline: none;
+}

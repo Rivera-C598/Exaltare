@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Me</title>
+</head>
+<body>
+     <img src="LS.jpg" alt="background" class="bg-image">
+
+    <header>
+        
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you’d like to contact me, please fill out the following. 
+                I’ll get back to you as soon as I can! <img src="images/kitty.jpg" alt="alien kitty" height="50" width="50"></p>
+
+            <form action="#" method="post">
+               
+                <label for="name"><b>Name</b>:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+                <label for="email"><b>Email</b>:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <label for="phone"><b>Phone</b>:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="09XX-XXX-XXXX"><br><br>
+
+                <label for="birthday"><b>Birthday</b>:</label><br>
+                <input type="date" id="birthday" name="birthday"><br><br>
+
+                <label for="subject"><b>Subject</b>:</label><br>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="collaboration">Collaboration</option>
+                </select><br><br>
+
+                <p>Preferred contact method:</p>
+                <label><input type="radio" name="contact_method" value="email" checked> <i><b>Email</b></i></label>
+                <label><input type="radio" name="contact_method" value="phone"> <i><b>Phone</b></i></label><br><br>
+
+                <label>
+                    <input type="checkbox" name="newsletter"> Subscribe to newsletter
+                </label><br><br>
+
+                <label for="message"><b>Message</b>:</label><br>
+                <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..."></textarea><br><br>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JCLeo</p>
+        <p>Follow me on 
+            <a href="https://www.facebook.com/johncarlm.leoniso" target="_blank">Facebook</a> 
+            or send me an <a href="mailto:johnleoniso19@gmail.com">Email</a>
+        </p>
+    </footer>
+</body>
+</html>

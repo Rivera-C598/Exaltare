@@ -1,0 +1,212 @@
+/* ------------------------------------ */
+/* 1. COLOR THEME & FONT */
+/* ------------------------------------ */
+
+:root {
+    /* Primary (1. Color Theme) */
+    --primary-text-color: #00567A; /* Deep Ocean Blue (Headings/Key Text) */
+    
+    /* Background (1. Color Theme) */
+    --background-color: #E0F2F7;   /* Very Light Aqua/Sky Blue (Page BG - Clean Look) */
+    
+    /* Accent (1. Color Theme) */
+    --accent-color: #A7D9E8;       /* Soft Light Blue (Card Backgrounds) */
+    
+    /* Highlight/Button Color */
+    --highlight-color: #6CD4E7;    /* Bright Aqua/Turquoise (Accent) */
+    
+    /* Secondary Colors */
+    --secondary-text: #003F5C;     /* Darker blue for body text */
+}
+
+/* Custom Fonts (2. Custom Fonts) */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean font for readability */
+    background-color: var(--background-color);
+    color: var(--secondary-text);
+    margin: 0;
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden; 
+    
+    /* Backgrounds (5. Backgrounds) - Subtle wave pattern for ocean feel */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(175,230,240,0.3) 0%, rgba(167,217,232,0.3) 80%),
+        linear-gradient(135deg, var(--background-color) 0%, var(--accent-color) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    font-family: 'Chewy', cursive; /* Fun, rounded, friendly font */
+    color: var(--primary-text-color);
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+/* ------------------------------------ */
+/* 2. HEADER - TITLE BUBBLE */
+/* ------------------------------------ */
+
+header {
+    padding: 20px;
+    z-index: 10;
+}
+
+.title-bubble {
+    background-color: var(--accent-color);
+    /* Box Model (3. Box Model) */
+    padding: 30px 40px;
+    margin: 30px auto;
+    width: fit-content;
+    max-width: 80%;
+    /* Rounded edges that look hand-drawn */
+    border-radius: 40px 10px 40px 10px;
+    border: 3px solid var(--primary-text-color);
+    
+    /* Shadows (4. Shadows) - Box Shadow for depth */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Transitions or Animations (6. Transitions or Animations) - Subtle bounce */
+    animation: simpleBounce 2s ease-in-out infinite alternate;
+    position: relative; 
+}
+
+@keyframes simpleBounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+.main-title {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    /* Shadows (4. Shadows) - Text Shadow */
+    text-shadow: 2px 2px 0px var(--highlight-color); 
+    color: var(--primary-text-color); 
+}
+
+/* ------------------------------------ */
+/* 3. MAIN CONTENT - STORY GRID & IMAGE STYLING */
+/* ------------------------------------ */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* More organized layout */
+    gap: 30px; 
+    max-width: 1200px;
+    /* Box Model (3. Box Model) */
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.story-box {
+    background-color: white; /* Clean white card */
+    /* Box Model (3. Box Model) */
+    padding: 25px;
+    border: 3px solid var(--primary-text-color);
+    /* Soft, irregular border-radius for cuteness */
+    border-radius: 15px 30px 15px 30px; 
+    
+    /* Shadows (4. Shadows) - Box Shadow */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 250px;
+    
+    /* Transitions or Animations (6. Transitions or Animations) - Transition for hover */
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* Pseudo-classes (8. Pseudo-classes) - :hover effect for story boxes */
+.story-box:hover {
+    transform: translateY(-3px);
+    background-color: var(--accent-color);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.story-box img {
+    max-width: 100px;
+    height: auto;
+    margin: 15px 0;
+    /* Box Model (3. Box Model) - Custom Styling for Hamster Photos */
+    border: 5px dashed var(--primary-text-color); /* Thick dashed border */
+    border-radius: 50%; /* Circular images */
+    padding: 5px; /* Padding inside the border */
+    background-color: white; /* White image background */
+    /* Shadows (4. Shadows) - Box Shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------ */
+/* 4. CONTACT BUTTON & QUOTE SECTION */
+/* ------------------------------------ */
+
+.contact-button {
+    background-color: var(--highlight-color);
+    color: var(--primary-text-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Chewy', cursive;
+    font-size: 1.2em;
+    
+    /* Transitions or Animations (6. Transitions or Animations) - Transition for hover */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Pseudo-classes (8. Pseudo-classes) - :hover and :focus */
+.contact-button:hover {
+    background-color: #8FD9EC; /* Slightly brighter aqua */
+    transform: scale(1.05); 
+}
+
+.quote-section {
+    background-color: var(--accent-color);
+    /* Box Model (3. Box Model) */
+    margin: 50px auto; 
+    padding: 30px;
+    max-width: 600px;
+    border: 2px dashed var(--primary-text-color);
+    border-radius: 20px;
+    /* Shadows (4. Shadows) - Box Shadow */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* ------------------------------------ */
+/* 5. FOOTER & MEDIA QUERIES */
+/* ------------------------------------ */
+
+footer {
+    background-color: var(--primary-text-color);
+    color: var(--background-color);
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .story-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .story-grid {
+        grid-template-columns: 1fr; /* Single column on phones */
+        gap: 20px;
+    }
+    .title-bubble {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .main-title {
+        font-size: 2em;
+    }
+}

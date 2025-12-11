@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg1: #09090b;
+  --bg2: #09090b; 
+  --primary: #f50d5b; 
+  --accent: #24a5d4; 
+  --text: #c5c6c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, var(--bg1), var(--bg2), #0b0c10, #111);
+  background-size: 400% 400%;
+  animation: bgPulse 15s ease infinite;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Background Animation */
+@keyframes bgPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1; /* adjust for visibility (0.1 = very faint, 1 = full visible) */
+  z-index: -1; /* keeps it behind everything */
+  pointer-events: none; /* so it doesn't block clicking links/buttons */
+}
+
+
+/* === Header & Navigation === */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 15, 20, 0.8);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1,
+.glitch {
+  font-family: 'Orbitron', sans-serif;
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  text-shadow: 0 0 10px var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* === Main Layout === */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(31, 40, 51, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px #f50d5b;
+}
+
+/* === Headings === */
+h2, h3 {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+/* === Tables === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+th {
+  background-color: #56013c;
+  color: var(--primary);
+}
+
+td {
+  background-color: rgba(11, 12, 16, 0.5);
+}
+
+/* === Lists === */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+ul li::before {
+  content: "▶";
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+audio {
+  display: block;
+  margin: 40px auto; /* centers horizontally + adds space */
+  width: 60%; /* adjust width as needed */
+}
+/* === Images === */
+img, video {
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.2);
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Buttons & Forms === */
+button, input[type="submit"] {
+  background: var(--accent);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  transform: scale(1.05);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background-color: rgba(11, 12, 16, 0.5);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+form {
+  text-align: left;
+}
+
+form label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.7); /* slightly larger */
+  accent-color: var(--accent); /* neon blue/pink color */
+  vertical-align: left;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  margin-right: 10px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(11, 12, 16, 0.7);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}

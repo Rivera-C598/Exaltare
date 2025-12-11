@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----------------------------
+   🎨 COLOR THEME
+   Primary: #ff7eb9 (soft pink)
+   Background: #ffffff (white)
+   Accent: #00bfff (sky blue)
+--------------------------------*/
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* -----------------------------
+   HEADER + NAVIGATION
+--------------------------------*/
+header {
+  background-color: #ff7eb9; /* soft pink header */
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  box-shadow: 0 4px 10px rgba(255, 126, 185, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 2.4em;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  background-color: white;
+  color: #ff7eb9;
+}
+
+/* -----------------------------
+   MAIN CONTENT
+--------------------------------*/
+main {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #f8faff; /* light blue background for contrast */
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 191, 255, 0.2);
+  animation: fadeIn 1s ease-in;
+}
+
+/* Keyframes Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Headings */
+section h2 {
+  color: #ff7eb9;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #00bfff;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Paragraphs & Lists */
+p {
+  font-size: 1.05em;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 25px;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+/* nth-child pseudo-class */
+ul li:nth-child(odd) {
+  color: #00bfff;
+}
+
+/* -----------------------------
+   IMAGES
+--------------------------------*/
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: 4px solid #ff7eb9;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: floatingGlow 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* 🌀 Floating Glow Animation */
+@keyframes floatingGlow {
+  0% { box-shadow: 0 0 15px rgba(255, 126, 185, 0.4); transform: translateY(0px); }
+  50% { box-shadow: 0 0 30px rgba(0, 191, 255, 0.4); transform: translateY(-8px); }
+  100% { box-shadow: 0 0 15px rgba(255, 126, 185, 0.4); transform: translateY(0px); }
+}
+
+/* -----------------------------
+   TABLES
+--------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 191, 255, 0.2);
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00bfff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+thead {
+  background-color: #ff7eb9;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1faff;
+}
+
+tfoot {
+  background-color: #00bfff;
+  color: white;
+}
+
+/* -----------------------------
+   MEDIA (audio, video)
+--------------------------------*/
+audio, video {
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 3px solid #00bfff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+audio:hover, video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+
+/* -----------------------------
+   ASIDE
+--------------------------------*/
+aside {
+  background-color: #ffffff;
+  border-left: 6px solid #ff7eb9;
+  padding: 20px;
+  margin: 20px auto;
+  width: 75%;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(255, 126, 185, 0.2);
+  position: relative;
+}
+
+aside h2 {
+  color: #ff7eb9;
+}
+
+/* Decorative pseudo-element */
+aside::before {
+  content: "💡";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5em;
+}
+
+/* -----------------------------
+   FOOTER
+--------------------------------*/
+footer {
+  text-align: center;
+  background-color: #00bfff; /* sky blue footer */
+  color: white;
+  padding: 20px 0;
+  margin-top: auto;
+  box-shadow: 0 -3px 10px rgba(0, 191, 255, 0.3);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff7eb9;
+}
+
+/* -----------------------------
+   BUTTON-LIKE LINKS (extra glow)
+--------------------------------*/
+nav ul li a:hover,
+footer a:hover {
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+  from { text-shadow: 0 0 5px #ff7eb9; }
+  to { text-shadow: 0 0 15px #00bfff; }
+}
+
+/* -----------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    padding: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Heart</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2><em>Contact Details</em></h2>
+    
+    <form action="contact.html" method="POST">
+      <label>Name: 
+        <input type="text" name="name" required>
+      </label><br><br>
+
+      <label>Email: 
+        <input type="email" name="email" required>
+      </label><br><br>
+
+      <label>Subject: 
+        <select name="subject">
+          <option value="feedback">Feedback</option>
+          <option value="support">Support</option>
+          <option value="other">Other</option>
+        </select>
+      </label><br><br>
+
+      <label>Message:<br>
+        <textarea name="message" rows="4" cols="40"></textarea>
+      </label><br><br>
+
+      <label>Phone: 
+        <input type="tel" name="phone">
+      </label><br><br>
+
+      <label>Birthday: 
+        <input type="date" name="birthday">
+      </label><br><br>
+
+      <label>
+        <input type="checkbox" name="newsletter"> Subscribe to Newsletter
+      </label><br><br>
+
+      <p><strong>Preferred Contact Method:</strong></p>
+      <label><input type="radio" name="contact_method" value="email"> Email</label>
+      <label><input type="radio" name="contact_method" value="phone"> Phone</label><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Heart Noval | Contact Page</p>
+  </footer>
+</body>
+</html>

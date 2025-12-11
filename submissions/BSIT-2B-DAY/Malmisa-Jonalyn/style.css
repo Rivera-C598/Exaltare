@@ -1,0 +1,176 @@
+
+@font-face {
+    font-family: 'sloop';
+    src: url(fonts/Sloop\ Script\ Regular.ttf);
+}
+@font-face {
+    font-family: 'tempting';
+    src: url(fonts/Tempting\ -\ PERSONAL\ USE\ ONLY.ttf);
+}
+body {
+    text-align: center;
+    background-color: #fec7d7;
+    color: #432818;
+}
+
+h1 {
+    font-family: 'tempting';
+    color: #0e172c;
+}
+.profile {
+    border-radius: 150px;
+    border-color: aliceblue;
+    box-shadow: 5px 2px 5px palevioletred;
+    margin-bottom: 20px;
+}
+nav a {
+    background-color: #fec7d7;
+    font-size: 25px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition-property: background-color, transform;
+    transition-duration: 0.9s;
+    cursor: pointer;
+}
+nav a:hover {
+    color: white;
+    background-color: #d9d4e7;
+    border-radius: 10px;
+    transform: scale(1.1);
+    
+}
+.shortIntro, .hobby, .skill {
+    background-color: #d9d4e7; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px 1px rgba(108, 52, 105, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 400px;
+    margin: 40px 20px 10px 20px;
+    float: left;
+    transform: 0.5;
+    transition: transform 0.5s;
+}
+.educTb, .favMedia {
+    background-color: #d9d4e7; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px 1px rgba(108, 52, 105, 0.5);
+    text-align: center;
+    max-width: auto;
+    width: 650px;
+    margin: 40px 20px 100px 20px;
+    float: left;
+    transform: 0.5;
+    transition: transform 0.5s;
+}
+
+.educ, .media{
+    border: 1.9px dashed #fec7d7;
+    border-radius: 12px;
+    background-color: #f9f8fc;
+    padding: 20px;
+    font-size: 18px; 
+}
+
+.educationTbl {
+    width: 600px;
+}
+
+.shortIntro:hover, .hobby:hover, .skill:hover, .educTb:hover, .favMedia:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+.SI, .hobby2, .skillTbl { 
+    border: 1.9px dashed #fec7d7;
+    border-radius: 12px;
+    background-color: #f9f8fc;
+    padding: 20px;
+    font-size: 18px; 
+    
+}
+
+.abtMe, .hobby2 {
+    text-align: justify;
+}
+.kpop {
+    float: left;
+}
+.anime {
+    float: right;
+}
+li {
+    text-align: justify;
+} 
+
+table {
+    border-collapse: collapse;
+}
+.table1 {
+    width: 300px;
+}
+header, section, footer{
+    text-align: center;
+}
+ul {
+    list-style-position: inside;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+video {
+    border-radius: 10px;
+}
+.qoute{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.bottom{
+    font-size: 18px;
+}
+
+/* BLOG PAGE & CONTACT PAGE*/
+
+.article{
+    background-color: #d9d4e7; 
+    border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px 1px rgba(108, 52, 105, 0.5);
+    padding: 20px;
+    margin: 30px auto 10px auto;
+}
+
+.article, .contact{
+    text-align: justify;
+}
+.articleBody{
+    border: 1.9px dashed #fec7d7;
+    border-radius: 12px;
+    background-color: #f9f8fc;
+    padding: 20px;
+    font-size: 18px; 
+}
+
+.main{
+    background-color: #d9d4e7; 
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px 1px rgba(108, 52, 105, 0.5);
+    text-align: justify;
+    max-width: 500px;
+    width: 400px;
+    margin: 40px auto 10px auto;
+}
+.main2{
+    border: 1.9px dashed #fec7d7;
+    border-radius: 12px;
+    background-color: #f9f8fc;
+    padding: 20px;
+    font-size: 18px; 
+}

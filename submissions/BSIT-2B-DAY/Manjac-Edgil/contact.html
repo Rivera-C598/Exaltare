@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Edgil</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="blog.html">Blog</a> | 
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- MAIN FORM -->
+    <main>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="subject">Subject:</label><br>
+            <select id="subject" name="subject">
+                <option value="inquiry">General Inquiry</option>
+                <option value="collab">Collaboration</option>
+                <option value="feedback">Feedback</option>
+            </select><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="birthday">Birthday:</label><br>
+            <input type="date" id="birthday" name="birthday"><br><br>
+
+            <label>
+                <input type="checkbox" name="newsletter"> Subscribe to Newsletter
+            </label><br><br>
+
+            <p>Preferred Contact Method:</p>
+            <label><input type="radio" name="contact_method" value="email"> Email</label>
+            <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+            <label><input type="radio" name="contact_method" value="facebook"> Facebook</label><br><br>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </main>
+
+     <audio controls autoplay>
+            <source src="SpongeBob.mp3" type="audio/mpeg">
+             Your browser does not support the audio element.
+    </audio>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 | Made by Edgil G. Manjac</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="pics/maomao.png" type="image/ico">
+</head>
+<body class="contact">
+    <header>
+    <h1>Jonalyn M. Malmisa ୨ৎ</h1>
+    <img class="profile" src="pics/jona.jpg" width="200px"
+    alt="Jonalyn's Picture">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Works</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+    
+
+    <div class="main">
+        <div class="main2">
+            <main>
+                <form action="/submit" method="POST">
+                    <label>Name: <input type="text" name="Name" required placeholder="Enter Name"></label>
+                    <br>
+                    <label>Email: <input type="email" name="Email"
+                    required placeholder="Enter Email"></label>
+                    <br>
+                    <label>Subject: 
+                        <select>
+                            <option>Suggestions</option>
+                            <option>Feedbacks</option>
+                            <option>Others</option>
+                        
+                        </select> 
+                    </label>
+                
+                    <br>
+                    <label>Message: 
+                        <textarea name="message" rows="4"></textarea>
+                    </label>
+                
+                    <br>
+                    <label>Number: <input type="tel" name="number" min="1" max="11"></label>
+                
+                    <br>
+                    <label>Birthday: <input type="date" name="bDate"></label>
+                
+                    <br>
+                    <label>Newsletter subsciption: <input type="checkbox" name="news"></label>
+                
+                    <br>
+                    <label>Preferred contact method: 
+                        <input type="radio">Telephone
+                        <input type="radio">Email
+                    
+                    </label>
+                
+                    <br>
+                    <button type="submit">Submit</button>
+                
+                </form>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

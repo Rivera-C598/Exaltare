@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Vera Ulric Lavandero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Vera Ulric Lavandero</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="works.html">Works</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-container">
+      <h2>Contact Me</h2>
+      <p>If you’d like to reach out for questions, collaborations, or just a friendly chat — fill out the form below! :3</p>
+
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="09xx-xxx-xxxx">
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+          <option>General Inquiry</option>
+          <option>Collaboration</option>
+          <option>Feedback</option>
+        </select>
+
+        <label>Preferred Contact:</label>
+        <div>
+          <input type="radio" id="emailpref" name="contactpref" value="Email">
+          <label for="emailpref">Email</label>
+
+          <input type="radio" id="phonepref" name="contactpref" value="Phone">
+          <label for="phonepref">Phone</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Subscribe to newsletter</label>
+        </div>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+
+        <div class="form-buttons">
+          <button type="submit">Send</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+
+      <hr>
+
+      <div class="contact-info">
+        <h3>Other Contact Info</h3>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:veraulriclavz11@gmail.com">veraulriclavz11@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:09673851110">09673851110</a></li>
+          <li><strong>Facebook:</strong> <a href="https://web.facebook.com/vera.ulric" target="_blank">Vera Ulric</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vera Ulric | Follow me on 
+      <a href="https://web.facebook.com/vera.ulric" target="_blank">Facebook</a>, 
+      <a href="https://x.com/appleleaf716" target="_blank">X</a>, 
+      <a href="https://www.instagram.com/mafuni_5/" target="_blank">Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+:root {
+    --wood-dark: #5D4037;    
+    --wood-light: #D7CCC8;    
+    --accent: #8D6E63;        
+    --text: #3E2723;          
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--wood-light);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Caveat', cursive;
+    color: var(--wood-dark);
+    margin: 1.5rem 0 1rem;
+}
+
+header, main, footer, section, article, aside, form {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background: #EFEBE9;             
+    border-radius: 16px;
+    border: 3px solid var(--wood-dark);
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid var(--accent);
+    margin: 1rem 0;
+}
+
+header, section, article, form, aside {
+    box-shadow: 0 6px 15px rgba(93, 64, 55, 0.2);
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+    background: linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%);
+    min-height: 100vh;
+}
+
+
+button, input[type="submit"] {
+    background: var(--accent);
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background: #6D4C41;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+header {
+    top: 10px;
+    z-index: 100;
+    background: #A1887F;
+    color: white;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(141, 110, 99, 0.3);
+}
+
+article:nth-child(odd) {
+    background: #E0D8D4;
+}
+
+
+form {
+    text-align: left;
+    display: grid;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: 500;
+    color: var(--wood-dark);
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+form input[type="checkbox"], form input[type="radio"] {
+    width: auto;
+}
+
+form button {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+footer {
+    background: var(--wood-dark);
+    color: #EFEBE9;
+    padding: 1.5rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FFCCBC;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    header, main, footer, section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

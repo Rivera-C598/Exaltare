@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <header>
+          <h1>GARCES JASPER</h1>
+          <img src="pp.jpg" alt="Gwapo" width="200px;" height="200px;">
+            <nav>
+                <a href="index.html">Home</a> |
+                <a href="blog.html">Blog</a> |
+                <a href="contact.html">Contact</a>
+            </nav>
+    </header>
+
+    <main>
+        <!--contact form -->
+            <h2>Contact Form</h2>
+            <form action="https://mail.google.com/mail/u/0/#inbox?compose=new" method="post">
+
+                <!-- input type: name -->
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                <!-- input type: email -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <!-- input type: phone (format) -->
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"><br><br>
+
+                <!-- input type: birthday -->
+                <label for="bdate">Birth Date:</label><br>
+                <input type="date" id="bdate" name="bdate"><br><br>
+
+                <!-- subject dropdown -->
+                <label for="subject">Subject:</label><br>
+                <select id="subject" name="subject">
+                    <option value="app">Make an App</option>
+                    <option value="webpage">Create a Web</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <!-- preferred contact method (radio buttons) -->
+                <p>Preferred Contact Method:</p>
+                <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                <label for="contactEmail">Email</label><br>
+                <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                <label for="contactPhone">Phone</label><br><br>
+
+                <!-- newsletter subscription char (checkbox) -->
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label><br><br>
+
+                <!-- message textarea -->
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your message here..."></textarea><br><br>
+
+                <!-- submit button -->
+                <input type="submit" value="Send Message">
+            </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Garces Jasper | All Rights Reserved</p>
+    <ul>
+        <li><a href="https://www.facebook.com/garces.jasper" target="_blank">FACEBOOK</a></li>
+        <li><a href="https://www.tiktok.com/@perz_jazz?lang=en-GB" target="_blank">TIKTOK</a></li>
+        <li><a href="https://www.youtube.com/@SkinnyJazz" target="_blank">YOUTUBE</a></li>
+        <li><a href="https://www.instagram.com/yaa.its_jazz" target="_blank">INSTAGRAM</a></li>
+        <li><a href="https://github.com/Jazzperz24" target="_blank">GITHUB</a></li>
+    </ul>
+    </footer>
+    </div>
+</body>
+</html>

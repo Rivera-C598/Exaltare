@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #4B2C3B;        
+  --background-color: #FFF5F8;     
+  --accent-color: #F7A8B8;         
+  --secondary-color: #FFD4E0;      
+  --highlight: #FFE9EF;            
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.8;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.8em;
+  margin-top: 30px;
+  color: var(--accent-color);
+  text-shadow: 1px 1px 4px rgba(247, 168, 184, 0.5);
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  width: 80%;
+  margin: 25px auto;
+  background: linear-gradient(to right, var(--secondary-color), var(--accent-color), var(--secondary-color));
+  border-radius: 50px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px auto;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 5px 12px;
+  font-size: 0.9em;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 3px 8px rgba(247, 168, 184, 0.3);
+  transform: translateY(-2px);
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--accent-color);
+  margin-top: 40px;
+}
+
+h3, h4, h5 {
+  color: var(--primary-color);
+  font-family: 'Quicksand', sans-serif;
+}
+
+img {
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 6px 15px rgba(247, 168, 184, 0.25);
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 60%;
+  text-align: left;
+}
+
+li {
+  background-color: var(--highlight);
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+li:hover {
+  background-color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+p em {
+  font-style: italic;
+  color: var(--accent-color);
+  background-color: var(--highlight);
+  padding: 8px 15px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(247, 168, 184, 0.15);
+}
+
+video, audio {
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(247, 168, 184, 0.3);
+}
+video{
+  width: 550px;
+  height: 300px;
+}
+
+footer {
+  background: linear-gradient(135deg, #FAD0D8, #F7A8B8);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 -3px 10px rgba(247, 168, 184, 0.2);
+}
+
+footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.5px;
+}

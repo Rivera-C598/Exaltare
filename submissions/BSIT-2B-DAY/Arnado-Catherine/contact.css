@@ -1,0 +1,130 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f2e6; 
+  color: #2e4d25; 
+  margin: 0;
+  padding: 0 20px;
+}
+
+
+header {
+  background-color: #3a7d44;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #d6f5d6; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a2d38f;
+}
+
+
+main {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(46, 77, 37, 0.15);
+}
+
+h2 em {
+  color: #4c7d29;
+  font-style: normal;
+  font-weight: 600;
+}
+
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2e4d25;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #a2d38f;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #2e4d25;
+  background-color: #f3fff3;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #3a7d44;
+  outline: none;
+  background-color: #e6f2e6;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 6px;
+  accent-color: #3a7d44;
+}
+
+
+button {
+  background-color: #3a7d44;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e4d25;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #4c7d29;
+  font-size: 0.9em;
+  border-top: 1px solid #a2d38f;
+  margin-top: 40px;
+}
